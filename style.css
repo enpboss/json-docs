@@ -735,5 +735,6 @@ border-top: 1px solid #e7e7e7;
 
 
 #jsonViewer{
+    padding-top: 70px;
     padding-bottom: 50px;
 }
