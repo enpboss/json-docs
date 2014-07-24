@@ -2901,6 +2901,7 @@ $(document).ready(function() {
         e.preventDefault();
         goToTop();
         initJSONdoc($(this));
+        $('.collapse').removeClass('in');
     });
 
     function initJSONdoc($el) {

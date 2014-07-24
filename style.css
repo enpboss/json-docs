@@ -536,13 +536,14 @@ pre {
     padding: 7px 0px;
     width: 100%;
     max-width: 320px;
+    min-height: 61px;
 }
 .navbar-toggle {
     position: absolute;
     right: 4px;
     top: 4px;
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
     .navbar-header {
         max-width: 100%;
    }
