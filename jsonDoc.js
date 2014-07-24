@@ -2538,6 +2538,13 @@ function registerExpanders() {
             $(this).addClass('nodeDescBot');
         }
     });
+    $('.nodeDescTop').find('a').on('click', function(e) {
+        e.preventDefault();
+        window.open(
+            $(this).attr('href'),
+            '_blank' // new window or tab.
+        );
+    });
 }
 var suggests, $autocomplete, $search, $searchTerm, $posnavbar, $searchnav, $searchnavPrev, $searchnavResult, $searchnavNext, $searchNoResult, indexResult, foundLi, val, pretty, doc;
 var $statusLoading = $('#statusLoading');
