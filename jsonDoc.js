@@ -2552,7 +2552,7 @@ var $statusLoading = $('#statusLoading');
 function getJson(file, endPoint, docType, tag) {
     var endPoint = endPoint || '',
         tag = tag || '';
-    $statusLoading.removeClass('display-no');
+    $statusLoading.addClass('show');
     $.getJSON(endPoint + file, function(data) {
         if (util.exists(docType) && docType === 'static') {
             riotpop(data, docType);
@@ -2570,7 +2570,7 @@ function getJson(file, endPoint, docType, tag) {
                 $('#searchTerm').val(tag);
             }
         }
-        $statusLoading.addClass('display-no');
+        $statusLoading.removeClass('show');
     });
 }
 
