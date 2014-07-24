@@ -459,7 +459,9 @@ opacity: 0.5;
     width: 100%;
     background-color: #F3F3F3;
     z-index: 10001;
+    position: absolute;
     left: 0;
+    top: 0px; padding: 0px;
 }
 #s_typing {
     margin-left: 0;
