@@ -2540,9 +2540,12 @@ function registerExpanders() {
     });
 }
 var suggests, $autocomplete, $search, $searchTerm, $posnavbar, $searchnav, $searchnavPrev, $searchnavResult, $searchnavNext, $searchNoResult, indexResult, foundLi, val, pretty, doc;
+var $statusLoading = $('#statusLoading');
 
-function getJson(file, endPoint, docType) {
-    var endPoint = endPoint || '';
+function getJson(file, endPoint, docType, tag) {
+    var endPoint = endPoint || '',
+        tag = tag || '';
+    $statusLoading.removeClass('display-no');
     $.getJSON(endPoint + file, function(data) {
         if (util.exists(docType) && docType === 'static') {
             riotpop(data, docType);
@@ -2555,14 +2558,19 @@ function getJson(file, endPoint, docType) {
             riotpop(data.properties);
             suggests.getKeys(data.properties);
             initSearchDom();
+            if (tag.length > 2) {
+                goSearch(tag);
+                $('#searchTerm').val(tag);
+            }
         }
+        $statusLoading.addClass('display-no');
     });
 }
 
 function initSearch() {
     $('.searchButton').click(function() {
         var val = $searchTerm.val();
-        if (val.lensgth > 2) {
+        if (val.length > 2) {
             goSearch(val);
         } else {
             $('.node-body li span.node-property').each(function() {
@@ -2596,7 +2604,7 @@ function goSearch(val) {
         if (foundLi.offset() != undefined) {
             $searchnavResult.html(' "' + val + '" ');
             collapseParents(foundLi);
-            //goToElement(foundLi.parent());
+            goToElement(foundLi.parent());
         }
     }
 }
@@ -2692,6 +2700,18 @@ suggests = {
 
 var chosen = -2;
 
+var $autocomplete = $('#autocomplete'),
+    $search = $('.search'),
+    $searchTerm = $('#searchTerm'),
+    $searchnav = $('#searchnav .yesresult'),
+    $searchnavResult = $('#searchnav .result'),
+    $searchnavPrev = $('#searchnav .prev'),
+    $searchnavNext = $('#searchnav .next'),
+    $searchNoResult = $('#searchnav .noresult'),
+    $searchTyping = $('#s_typing'),
+    $searchTypingLi = $('#s_typing li');
+$searchNoResult.hide();
+$searchnav.hide();
 
 function initSearchDom() {
 
@@ -2705,11 +2725,11 @@ function initSearchDom() {
     $searchnavPrev = $('#searchnav .prev');
     $searchnavNext = $('#searchnav .next');
     $searchNoResult = $('#searchnav .noresult');
-    val = '';
     $searchNoResult.hide();
     $searchnav.hide();
     $searchTyping = $('#s_typing');
     $searchTypingLi = $('#s_typing li');
+    var val = '';
 
 
     $('.search-btn').on('click', function(e) {
@@ -2883,15 +2903,28 @@ $(document).ready(function() {
             docType = el.attr('docType'),
             title = el.attr('title');
 
-        if (HashSearch.keyExists("schema")) {
-            jsonFile = HashSearch.get('schema');
-        }
-        if (HashSearch.keyExists("title")) {
-            title = HashSearch.get('title');
-        }
-        if (HashSearch.keyExists("docType")) {
-            docType = HashSearch.get('docType');
-        }
+
+        riot.route(function(path) {
+            if (HashSearch.keyExists("schema")) {
+                jsonFile = HashSearch.get('schema');
+            }
+            if (HashSearch.keyExists("title")) {
+                title = HashSearch.get('title');
+            }
+            if (HashSearch.keyExists("docType")) {
+                docType = HashSearch.get('docType');
+            }
+            var tag;
+
+            if (HashSearch.keyExists("tag")) {
+                tag = HashSearch.get('tag');
+            }
+
+            $('#subtitle').html(title);
+            getJson(jsonFile, endPoint, docType, tag);
+
+        });
+
         $('#subtitle').html(title);
         getJson(jsonFile, endPoint, docType);
     }
