@@ -1,0 +1,43 @@
+{
+	"content": [{
+		"url": "http://yourdomain.com/path/to/video",
+		"autoplay": true
+	}],
+	
+	"bumpers": [
+		{
+			"controls": {"position":"none"},
+			"overlays": [
+				{
+					"type": "image",
+					"position": "fullscreen",
+					"start": "-1",
+					"end": "0",
+					"parameters": {
+						"url": "http://yourdomain.com/path/to/image.png",
+						"clickThrough": "apsplayer://play",
+						"stretchMode": "center"
+					},
+					"closeButton": {
+						"show": false
+					}
+				},
+				{
+					"type": "image",
+					"position": "fullscreen",
+					"start": "-1",
+					"end": "0",
+					"parameters": {
+						"url": "APSMediaPlayer.bundle/video_play.png",
+						"clickThrough": "apsplayer://play",
+						"stretchMode": "center"
+					},
+					"closeButton": {
+						"show": false
+					}
+				}
+			]
+		}
+	]
+	
+}

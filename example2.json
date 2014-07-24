@@ -1,0 +1,9 @@
+{
+	"content": [{
+		"youtube": "https://www.youtube.com/watch?v=VIDEOID",
+		"autoplay": true,
+		"controls" : {
+			"components" : ["totalTime", "slider", "currentTime", "fullscreen"]
+		}
+	}]
+}

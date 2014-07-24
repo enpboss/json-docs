@@ -1,0 +1,32 @@
+{
+	"content": [{
+		"url": "http://yourdomain.com/path/to/video",
+		"autoplay": true,
+		"controls" : {
+			"components" : ["totalTime", "slider", "currentTime", "fullscreen"]
+		}
+	}],
+	"ads": {
+		"adBreaks": {
+			"preContent": {
+				"urls": [
+	            		"http://yourdomain.com/path/to/vast-preroll.xml"
+	            	]
+			},
+            "nonLinears": [
+            	{
+	            	"urls": [
+	            		"http://yourdomain.com/path/to/vast-nonlinear.xml"
+	            	],
+	            	"offset": "20"
+            	}
+            ],
+            "midContent": [],
+            "postContent": []
+
+        },
+        "countdown": {
+            "text": "__ad_index__/__total_ads__ Remaining: __remaining__s"
+        }
+	}
+}

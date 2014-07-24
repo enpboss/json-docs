@@ -1,0 +1,12 @@
+{
+	"content": [{
+		"url": "http://yourdomain.com/path/to/video",
+		"autoplay": true
+	},{
+		"url": "http://yourdomain.com/path/to/another/video",
+		"autoplay": true,
+		"controls" : {
+			"components" : ["totalTime", "slider", "currentTime", "fullscreen"]
+		}
+	}]
+}

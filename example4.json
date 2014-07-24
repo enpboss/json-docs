@@ -1,0 +1,17 @@
+{
+	"content": [{
+		"url": "http://yourdomain.com/path/to/video",
+		"autoplay": true,
+		"overlays": [
+			{
+				"type": "text",
+				"position": "bottom",
+				"start": "10",
+				"end": "20",
+				"parameters": {
+					"text": "Hello Veeso!"
+				}
+			}
+		]
+	}]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "title": "MKD::The text to display in the overlay. The following placeholders are accepted:\n\n- *`__remaining__`* will be replaced with the remaining number of seconds for the current video clip being rendered.\n- *`__ad_index__`* will be replaced with the current ad index within the ad break.\n- *`__total_ads__`* will be replaced with the total number of ads within the ad break."
+    },
+    "color": {
+      "type": "string",
+      "minLength": 6,
+      "maxLength": 6,
+      "default": "ffffff",
+      "title": "The color of the text."
+    },
+    "font": {
+      "type": "string",
+      "title": "The font of the text."
+    },
+    "size": {
+      "type": "integer",
+      "title": "The size of the text"
+    }
+  },
+  "additionalProperties": false
+}

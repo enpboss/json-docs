@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "title": "The URL of the image to load."
+    },
+    "clickThrough": {
+      "type": "string",
+      "optional": true,
+      "title": "The URL that should be loaded on image tap. You can also use the following player commands: appscend://play, appscend://pause, appscend://skip and appscend://fullscreen."
+    },
+    "clickTracking": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "A URL that should be pinged when the image is tapped by the user."
+      },
+      "optional": true,
+      "additionalProperties": false,
+      "title": "An array of URLs that should be pinged when the image is tapped by the user."
+    },
+    "viewTracking": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "A URL that should be pinged when the image is displayed on screen."
+      },
+      "optional": true,
+      "additionalProperties": false,
+      "title": "An array of URLs that should be pinged when the image is displayed on screen."
+    },
+    "errorTracking": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "A URL that should be pinged when the image cannot be loaded."
+      },
+      "optional": true,
+      "additionalProperties": false,
+      "title": "An array of URLs that should be pinged when the image cannot be loaded."
+    },
+    "backgroundColor": {
+      "type": "string",
+      "minLength": 6,
+      "maxLength": 6,
+      "title": "The background color of the image overlay."
+    },
+    "stretchMode": {
+      "type": "string",
+      "optional": true,
+      "default": "aspectFit",
+      "enum": [
+        "aspectFill",
+        "aspectFit",
+        "fill",
+        "center",
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "title": "Defines how the image should be stretched within the overlay surface."
+    }
+  },
+  "additionalProperties": false
+}

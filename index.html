@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <title>Veeso Player JSON Configuration Documentation</title>
+        <meta charset="UTF-8">
+        <meta name=description content="">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="navbar navbar-default" role="navigation" id="searchNavWrap">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class='search-box'>
+                        <form class='search-form'>
+                            <input id="autocomplete" type="text" disabled="disabled" class="form-control"/>
+                            <input id="searchTerm"  type='text' class='form-control'/>
+                            <button class='btn btn-link search-btn'>
+                            <i class='glyphicon glyphicon-search'></i>
+                            </button>
+                        </form>
+                    <ul id="s_typing"></ul>
+                </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://veeso.co">
+                            <img src="brandLogoB.png" style="height: 16px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#documentation" rel="schema.json" endPoint="" docType="dinamic" title="" class="loadJS">
+                        <i class="glyphicon glyphicon-file"></i>
+                        <span>Documentation</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-eye-open"></i>
+                        <span>Examples</span>
+                        <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="example" rel="example1.json" endPoint="" docType="static" title="Example" class="loadJS">Simple, Two Video Playlist</a></li>
+                            <li><a href="example" rel="example2.json" endPoint="" docType="static" title="Example" class="loadJS">Playback from Youtube</a></li>
+							<li class="divider"></li>
+                            <li><a href="example" rel="example3.json" endPoint="" docType="static" title="Example" class="loadJS">Showing a Still Before Playback</a></li>
+                            <li><a href="example" rel="example4.json" endPoint="" docType="static" title="Example" class="loadJS">Adding an Overlay to a Video</a></li>
+							<li class="divider"></li>
+                            <li><a href="example" rel="example5.json" endPoint="" docType="static" title="Example" class="loadJS">Inserting ads using VMAP</a></li>
+                            <li><a href="example" rel="example6.json" endPoint="" docType="static" title="Example" class="loadJS">Inserting ads using VAST</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="container">
+            <h1>Veeso Player JSON Configuration Documentation</h1>
+            <h3 id="subtitle"></h3>
+            <div class="row">
+                <div class="col-sm-12" id="riot" rel="schema.json" endPoint="" docType="dinamic" title="">
+                </div>
+            </div>
+            </div><!-- /container -->
+            <div class="footer valign-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="searchnav">
+                                <div class="yesresult">
+                                    <a class="prev" href="#"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Prev result</a>
+                                    <span class="result"></span>
+                                    <a class="next" href="#">Next result&nbsp;<i class="glyphicon glyphicon-chevron-right"></i></a>
+                                </div>
+                                <span class="noresult">No results</span>
+                            </div>
+                            <div class="extras">
+                                <a href="#" id="collapseAll"><i class="glyphicon glyphicon-fullscreen"></i></a>
+                                <a href="#" id="top"><i class="glyphicon glyphicon-upload"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- jQuery -->
+            <script src="//code.jquery.com/jquery.js"></script>
+            <!-- Bootstrap JavaScript -->
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="jsonDoc.js" ></script>
+        </body>
+    </html>

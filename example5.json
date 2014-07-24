@@ -1,0 +1,17 @@
+{
+	"content": [{
+		"url": "http://yourdomain.com/path/to/video",
+		"autoplay": true,
+		"controls" : {
+			"components" : ["totalTime", "slider", "currentTime", "fullscreen"]
+		}
+	}],
+	"ads": {
+		"vmap": "http://yourdomain.com/path/to/vmap.xml",
+		"skipButton": {
+			"progress": {
+				"position": "right"
+			}
+		}
+	}
+}

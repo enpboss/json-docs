@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "optional": true,
+      "title": "HTML code to display in the overlay."
+    },
+    "iframe": {
+      "type": "string",
+      "optional": true,
+      "title": "The URL to be used as the source for the iframe loaded in the overlay."
+    },
+    "script": {
+      "type": "string",
+      "optional": true,
+      "title": "The URL of the JavaScript file to load in the overlay."
+    },
+    "url": {
+      "type": "string",
+      "optional": true,
+      "title": "The URL to load in the overlay."
+    },
+    "viewportWidth": {
+      "type": "integer",
+      "optional": true,
+      "title": "The width to be set in the meta viewport tag of the rendered content."
+    },
+    "viewportHeight": {
+      "type": "integer",
+      "optional": true,
+      "title": "The height to be set in the meta viewport tag of the rendered content."
+    },
+    "errorTracking": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "A URL that should be pinged when the requested content is unable to load."
+      },
+      "optional": true,
+      "additionalProperties": false,
+      "title": "An array of URLs that should be pinged when the requested content is unable to load."
+    }
+  },
+  "additionalProperties": false
+}

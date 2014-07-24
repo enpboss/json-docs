@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "clickThrough": {
+      "type": "string",
+      "optional": true,
+      "title": "The URL that should be loaded on button click. You can also use the following player commands: appscend://play, appscend://pause, appscend://skip and appscend://fullscreen."
+    },
+    "clickTracking": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "A URL that should be pinged when the button is tapped by the user."
+      },
+      "optional": true,
+      "additionalProperties": false,
+      "title": "An array of URLs that should be pinged when the button is tapped by the user."
+    }
+  },
+  "additionalProperties": false
+}
