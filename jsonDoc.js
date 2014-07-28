@@ -2926,6 +2926,8 @@ $(document).ready(function() {
 
             if (HashSearch.keyExists("tag")) {
                 tag = HashSearch.get('tag');
+                tag = tag.split('.');
+                tag = tag[tag.length - 1];
             }
 
             $('#subtitle').html(title);
