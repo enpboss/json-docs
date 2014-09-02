@@ -8,11 +8,11 @@
 	}],
 	"ads": {
 		"adBreaks": {
-			"preContent": {
+			"preContent": [{
 				"urls": [
 	            		"https://s3-eu-west-1.amazonaws.com/demo-app.assets.appscend.com/movies/vast_multiple_ads.xml"
 	            	]
-			},
+			}],
             "nonLinears": [
             	{
 	            	"urls": [
