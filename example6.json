@@ -1,22 +1,22 @@
 {
 	"content": [{
-		"url": "http://yourdomain.com/path/to/video",
+		"url": "https://s3-eu-west-1.amazonaws.com/demo-app.assets.appscend.com/movies/bb3.mp4",
 		"autoplay": true,
 		"controls" : {
-			"components" : ["totalTime", "slider", "currentTime", "fullscreen"]
+			"components" : ["playback", "totalTime", "fullscreen"]
 		}
 	}],
 	"ads": {
 		"adBreaks": {
 			"preContent": {
 				"urls": [
-	            		"http://yourdomain.com/path/to/vast-preroll.xml"
+	            		"https://s3-eu-west-1.amazonaws.com/demo-app.assets.appscend.com/movies/vast_multiple_ads.xml"
 	            	]
 			},
             "nonLinears": [
             	{
 	            	"urls": [
-	            		"http://yourdomain.com/path/to/vast-nonlinear.xml"
+	            		"https://s3-eu-west-1.amazonaws.com/demo-app.assets.appscend.com/movies/vast_nonlinear.xml"
 	            	],
 	            	"offset": "20"
             	}
