@@ -26,7 +26,7 @@
 
         },
         "countdown": {
-            "text": "__ad_index__/__total_ads__ Remaining: __remaining__s"
+            "text": "__ad_index__/__total_ads__ ads. Remaining: __remaining__s"
         }
 	}
 }
