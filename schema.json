@@ -1315,7 +1315,7 @@
                 "afterBannerTapped": {
                     "type": "string",
                     "optional": true,
-                    "default": "doNothing",
+                    "default": "closeOverlay",
                     "enum": [
                         "closeOverlay",
                         "skipUnit",
@@ -1326,7 +1326,7 @@
                 "afterVideoAdTapped": {
                     "type": "string",
                     "optional": true,
-                    "default": "doNothing",
+                    "default": "skipUnit",
                     "enum": [
                         "skipUnit",
                         "doNothing"
